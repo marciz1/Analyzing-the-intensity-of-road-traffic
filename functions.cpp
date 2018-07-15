@@ -27,7 +27,6 @@ void on_trackbar_threshold(int alpha_slider, void* param) {
 	Parameters* p = (Parameters*)param;
 	p->closingImage.copyTo(p->thresholdImage);
 	threshold(p->thresholdImage, p->thresholdImage, alpha_slider, p->prog_slider_max_threshold, THRESH_BINARY);
-	//imshow("thresholdImage", p->thresholdImage);
 
 }
 
